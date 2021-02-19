@@ -56,6 +56,11 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+const navSelMsg = 0;
+const navSelContacts = 1;
+const navSelDiscover = 2;
+const navSelPersonal = 3;
+
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
@@ -64,6 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
     ContactsWidget(),
     DiscoverWidget(),
     PersonalWidget(),
+  ];
+
+  static const List<String> _navTitles = [
+    '信息',
+    '联系人',
+    '发现',
+    '我',
   ];
 
   void _onItemTapped(int index) {
@@ -81,21 +93,22 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
+      appBar: _selectedIndex == navSelPersonal ? AppBar() : AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(_navTitles[_selectedIndex]),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.search),
-            tooltip: 'Search',
+            tooltip: '搜索',
             onPressed: () {
               openSearchPage(context);
             },
           ),
           IconButton(
             icon: const Icon(Icons.add_circle_outline),
-            tooltip: 'Add',
+            tooltip: '添加',
             onPressed: () {
               Fluttertoast.showToast(
                 msg: "This is Center Short Toast",
