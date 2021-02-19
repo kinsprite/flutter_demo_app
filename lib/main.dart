@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'src/contacts/contacts.dart';
-import 'src/discover/discover.dart';
-import 'src/msg/msg.dart';
-import 'src/personal/personal.dart';
-import 'src/search/search.dart';
+import 'src/pages/contacts/contacts.dart';
+import 'src/pages/discover/discover.dart';
+import 'src/pages/msg/msg.dart';
+import 'src/pages/personal/personal.dart';
+import 'src/pages/search/search.dart';
 
 void main() {
   runApp(MyApp());
