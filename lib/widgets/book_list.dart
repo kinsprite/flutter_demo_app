@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Book {
-  int id;
-  String name;
-  double price;
-
-  Book({this.id, this.name, this.price});
-}
+import '../models/book.dart';
 
 class BookListWidget extends StatelessWidget {
   final List<Book> books;

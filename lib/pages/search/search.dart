@@ -16,11 +16,3 @@ class SearchPage extends StatelessWidget {
     );
   }
 }
-
-void openSearchPage(BuildContext context) {
-  Navigator.push(context, MaterialPageRoute(
-    builder: (BuildContext context) {
-      return SearchPage();
-    },
-  ));
-}

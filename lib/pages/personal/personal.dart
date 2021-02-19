@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'books.dart';
+import '../../constants/route_path.dart';
 
 class PersonalWidget extends StatelessWidget {
   @override
@@ -16,7 +15,7 @@ class PersonalWidget extends StatelessWidget {
           ),
           label: Text("My Books"),
           onPressed: () {
-            openBooksPage(context);
+            Navigator.pushNamed(context, RoutePath.booksPage);
           },
         )
       ],
