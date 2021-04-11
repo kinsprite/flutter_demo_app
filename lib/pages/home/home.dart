@@ -118,7 +118,6 @@ class _AddIconBtn extends StatelessWidget {
           content: Text('Yay! Clicked "Add" button!'),
           action: SnackBarAction(
             label: 'Undo',
-
             onPressed: () {
               // Some code to undo the change.
             },
